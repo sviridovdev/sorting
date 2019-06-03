@@ -1,5 +1,6 @@
 .app {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
 }
 
 .app-input {
@@ -7,20 +8,52 @@
   border: none;
   width: 300px;
   height: 100px;
+
+  @media(max-width: 645px) {
+    width: 100%;
+  }
 }
 
 .grid-row {
   display: flex;
   width: 100%;
+
+  @media(max-width: 645px) {
+    display: block;
+  }
+}
+
+.grid-row-2 {
+  flex-direction: row-reverse;
+}
+
+.grid-col-main,
+.grid-col-side {
+  @media(min-width: 646px) {
+    padding: 0 15px;
+  }
 }
 
 .grid-col-main {
-   flex-basis: 100% / 3 * 2;
- }
+  flex-basis: 100% / 3 * 2;
+}
 
 .grid-col-side {
   flex-basis: 100% / 3;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+}
+
+.search-type-selection {
+  padding: 20px 0;
+
+  @media(max-width: 645px) {
+    display: flex;
+  }
+
+  label {
+    display: block;
+
+    @media(max-width: 645px) {
+      flex-basis: 50%;
+    }
+  }
 }

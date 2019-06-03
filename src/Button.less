@@ -1,9 +1,21 @@
 button {
   border: 2px solid white;
-  border-radius: 5px;
+  border-radius: 2px;
   padding: 20px 40px;
   background: transparent;
   color: white;
   font-size: inherit;
   cursor: pointer;
+  width: 200px;
+  transition-duration: 0.3s;
+
+  &:hover {
+    background: white;
+    color: #5499C7;
+  }
+
+  @media(max-width: 645px) {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
