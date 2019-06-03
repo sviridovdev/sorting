@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.less';
-import MergeSort from './MergeSort';
-import Button from './Button';
-import InsertionSort from "./InsertionSort";
-import RadioSortAlg from "./RadioSortAlg"
+import Button from './components/button/Button';
+import RadioSortAlg from "./components/radiosortalg/RadioSortAlg";
+import InsertionSort from "./algorithms/InsertionSort";
+import MergeSort from './algorithms/MergeSort';
 
 class App extends React.Component {
     private readonly CHOICE_MERGE_SORT = 0;
