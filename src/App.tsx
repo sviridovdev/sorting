@@ -3,6 +3,7 @@ import './App.less';
 import MergeSort from './MergeSort';
 import Button from './Button';
 import InsertionSort from "./InsertionSort";
+import RadioSortAlg from "./RadioSortAlg"
 
 class App extends React.Component {
     private readonly CHOICE_MERGE_SORT = 0;
@@ -115,19 +116,19 @@ class App extends React.Component {
                             <Button text="Sort" clickHandler={this.onSortButtonClick}/>
 
                             <div className="search-type-selection">
-                                <label>
-                                    <input type="radio" name="sortalg" value={this.CHOICE_MERGE_SORT}
-                                           onChange={this.onRadioChange}
-                                           checked={this.state.sortType == this.CHOICE_MERGE_SORT}/>
-                                    Merge sort
-                                </label>
+                                <RadioSortAlg
+                                    value={this.CHOICE_MERGE_SORT}
+                                    onchange={this.onRadioChange}
+                                    checked={this.state.sortType == this.CHOICE_MERGE_SORT}
+                                    label="Merge sort"
+                                />
 
-                                <label>
-                                    <input type="radio" name="sortalg" value={this.CHOICE_INSERTION_SORT}
-                                           onChange={this.onRadioChange}
-                                           checked={this.state.sortType == this.CHOICE_INSERTION_SORT}/>
-                                    Insertion sort
-                                </label>
+                                <RadioSortAlg
+                                    value={this.CHOICE_INSERTION_SORT}
+                                    onchange={this.onRadioChange}
+                                    checked={this.state.sortType == this.CHOICE_INSERTION_SORT}
+                                    label="Insertion sort"
+                                />
                             </div>
                         </div>
                         <div className="grid-col-main">
